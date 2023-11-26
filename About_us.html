@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revanta Technical Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* Add your additional styles here if needed */
+    </style>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+        }
+
+        function showReadMore() {
+            const readMoreSection = document.getElementById('read-more');
+            readMoreSection.style.display = 'block';
+            const contactSection = document.getElementById('contact');
+            contactSection.style.display = 'block';
+            const socialLinksSection = document.getElementById('social-links');
+            socialLinksSection.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>TEAM REVANTA</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('achievement')">Achievement</a>
+        <a href="#" onclick="showSection('team')">Our Team</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Revanta Technical Club</h2>
+        <p>This is the home section of our technical club website. Explore the different sections in the navbar to learn more about us.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div>
+                <p>Amidst the elusive life at NIT Jamshedpur, Team Revanta is one such name that caters for the inquisitive minds.
+                    Quenching the thirst of curiosity the team aims at making solar cars.
+                    The saga of coup and its journey weaves back in the year 2009. Since than the team has fluttered the institution's flag wherever it went. The progress leaves no stone unturned as year 2012, 2014 and 2015 witnessed marvellous feats clinched by the team.
+                    In year 2016, team stood 14th in Indo Asian Solar Challenge among 195 teams. Nurturing more ideas it mustered all its efforts to secure the lightest weight vehicle Award, 2017 ESVC with an overall 9th rank among 86 teams.
+                    In year 2018, the team parted in Indo Asian Solar Challenge, at satna, Madhya Pradesh. The crew bagged many feats like winner in B-Plan, winner in acceleration and brake test, Runner up at Auto-Cross and final endurance test, finally the pro fusion of 30 innovations helped the team to gain 3rd position Nation wide.
+                    In 2019 we participated in Electric Solar Vehicle Championship (ESVC'19). We stood 4th in designing and 6th in B-Plan.
+                    
+                    "The journey is yet incomplete as much more is to be achieved!"</p>
+            </div>
+            <img class="about-image" src="revanta.jpeg" alt="About Image">
+        </div>
+        <button onclick="showReadMore()">Read More</button>
+        <div id="read-more" class="read-more-section">
+            <h2>Our Mission</h2>
+            <p>The journey, marked by achievements in categories such as B-Plan, acceleration and brake tests, Auto-Cross, and overall national rankings, is a testament to Team Revanta's dedication to quenching the thirst of curiosity and inspiring inquisitive minds. As they reflect on their past successes, the team remains steadfast in its mission, acknowledging that the journey is yet incomplete, and much more is to be achieved in the pursuit of advancing solar car technology.</p>
+            <div class="team-member">
+                <img src="priyanshu raj.jpeg" alt="Team Captain">&nbsp;&nbsp;
+                <br><p style="font-family:Brush Script MT">&nbsp;"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis facere, dolorem unde inventore corporis nulla dolores id quisquam est voluptatum numquam doloremque illo sapiente dolorum deleniti possimus nisi reprehenderit laudantium!"</p>
+            </div>
+            <p>Priyanshu Raj</p>
+            <p><b>Team Captain</b></p>
+            <div class="team-member">
+                <img src="Ayushi Kumari.jpeg" alt="Vice Captain">&nbsp;&nbsp;
+                
+                <br><p style="font-family:Brush Script MT">&nbsp;"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error quia quis et! Ipsum soluta magnam nemo cupiditate maiores alias quibusdam vero, magni quis consequuntur maxime nostrum cum laboriosam labore quasi."</p>
+            </div>
+            <p>Ayushi Kumari</p>
+            <p><b>Vice Captain</b></p>
+            
+        </div>
+        <div id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="achievement">
+        <h2>Achievements</h2>
+        <p>Details about our club's achievements will go here.</p>
+    </section>
+
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="team-member">
+            <img src="priyanshu raj.jpeg" alt="Team Captain">
+            <h3>Team Captain</h3>
+            <p>Name: Priyanshu Raj</p>
+        </div>
+        <div class="team-member">
+            <img src="Ayushi Kumari.jpeg" alt="Vice Captain">
+            <h3>Vice Captain</h3>
+            <p>Name: Ayushi</p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+</body>
+</html>
